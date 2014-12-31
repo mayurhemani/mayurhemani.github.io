@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>A Peacock's Eye View</title>
+		<meta name="keywords" content="Mayur Hemani, Website, Visualization, Design" />
+		<meta name="description" content="Home page for mayur hemani" />
+		<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+		<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+		<style>
+			.with-border {
+				border: 1px solid #ccc;
+				background-color: #ddd;
+				border-radius: 10px;
+				margin-bottom: 20px;
+			}
+			.with-border > p.header {
+				line-height: 34pt;
+				font-weight: bold;
+				font-size: 12pt;
+			}
+
+			.with-border > div {
+				width: 100%;
+				margin: auto;
+				text-align: center;
+			}
+			
+			canvas {
+				border: 1px solid #ccc;
+				width: 640px;
+				margin-left: auto;
+				margin-right: auto;
+				margin-bottom: 20px;
+			}
+			
+			.navbar {
+				background-color: #700;
+				border: 0px;
+				vertical-align: middle;
+			}
+
+			.navbar * {
+				color: #fff;
+				font-family: 'Arial','Helvetica',sans-serif;
+				font-size: 22pt;
+				text-shadow: 1px 0px #ccc;
+			}
+
+			.ti {
+				font-weight: bold;
+			}
+	
+		</style>
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse container" role="navigation">
+	 		<div class="container-fluid">
+  		  	<!-- Brand and toggle get grouped for better mobile display -->	
+				<div class="navbar-header">
+					void* myConduit()
+    			</div>
+    			<!-- Collect the nav links, forms, and other content for toggling -->
+			</div>
+		</nav>
+		<br/><br/>
+
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+		<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="processing.min.js"></script>
+		<script type="text/javascript" src="fabric.min.js"></script>
+		<div class="container">
+			<div class="col-xs-12 with-border">
+				<p class="header">My experience with programming languages and compilers</p>
+				<ul id='langs'>
+					<li><span class='year'>1994</span><span class='lang'>BASIC</span><span class='imgurl'>http://upload.wikimedia.org/wikipedia/en/6/6b/GW-BASIC_3.23.png</span></li>
+					<li><span class='year'>1998</span><span class='lang'>QBASIC</span><span class='imgurl'>http://upload.wikimedia.org/wikipedia/en/0/01/QBasic_Opening_Screen.png</span></li>
+					<li><span class='year'>1998</span><span class='lang'>C++(DOS)</span><span class='imgurl'>http://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Turbo_CPP_Compiler.jpg/200px-Turbo_CPP_Compiler.jpg</span></li>
+					<li><span class='year'>2000</span><span class='lang'>C++(Linux)</span><span class='imgurl'>http://upload.wikimedia.org/wikipedia/commons/thumb/a/af/GNU_Compiler_Collection_logo.svg/100px-GNU_Compiler_Collection_logo.svg.png</span></li>
+					<li><span class='year'>2002</span><span class='lang'>Javascript</span><span class='imgurl'>http://upload.wikimedia.org/wikipedia/commons/8/8e/WikiBookTitel_JavaScript.jpg</span></li>
+					<li><span class='year'>2003</span><span class='lang'>Visual Basic</span><span class='imgurl'>http://upload.wikimedia.org/wikipedia/en/7/75/Microsoft_Visual_Studio_6_screenshot.png</span></li>
+					<li><span class='year'>2004</span><span class='lang'>Java</span><span class='imgurl'>http://upload.wikimedia.org/wikipedia/vec/0/05/Java_Logo.svg.png</span></li>
+					<li><span class='year'>2004</span><span class='lang'>PHP</span><span class='imgurl'>http://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/300px-PHP-logo.svg.png</span></li>
+					<li><span class='year'>2004</span><span class='lang'>Perl</span><span class='imgurl'>http://upload.wikimedia.org/wikipedia/en/0/00/Perl-camel-small.png</span></li>
+					<li><span class='year'>2005</span><span class='lang'>C</span><span class='imgurl'>http://upload.wikimedia.org/wikipedia/commons/c/c6/Dennis_MacAlistair_Ritchie.jpg</span></li>
+					<li><span class='year'>2006</span><span class='lang'>C++(Carbon)</span><span class='imgurl'>http://upload.wikimedia.org/wikipedia/en/4/4a/Jaguar_on_G4.png</span></li>
+					<li><span class='year'>2007</span><span class='lang'>MSVC++</span><span class='imgurl'>http://upload.wikimedia.org/wikipedia/en/thumb/4/4f/Visual_Studio_Express_2012_for_Desktop.png/300px-Visual_Studio_Express_2012_for_Desktop.png</span></li>
+					<li><span class='year'>2008</span><span class='lang'>Actionscript</span><span class='imgurl'>http://upload.wikimedia.org/wikipedia/en/b/b7/FlashBuilder4.png</span></li>
+					<li><span class='year'>2011</span><span class='lang'>Python</span><span class='imgurl'>http://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Python_add5_syntax.svg/292px-Python_add5_syntax.svg.png</span></li>
+					<li><span class='year'>2011</span><span class='lang'>C++0x</span><span class='imgurl'>http://upload.wikimedia.org/wikipedia/commons/b/bd/Bjarne-stroustrup.jpg</span></li>
+					<li><span class='year'>2012</span><span class='lang'>Haskell</span><span class='imgurl'>http://upload.wikimedia.org/wikipedia/commons/4/43/Haskell-Logo-Variation.png</span></li>
+					<li><span class='year'>2013</span><span class='lang'>JSP</span><span class='imgurl'>http://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/170px-Wave.svg.png</span></li>
+				</ul>
+				<div class='container'>
+				<canvas id="progcv" width="700" height="400" style="margin-bottom:20px;">
+				</canvas>
+				<img id='demoImage' width="140" height="160" style="position: absolute; left: 750px; top: 40px;" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wave.svg/170px-Wave.svg.png" />
+				</div>
+				<script type="text/javascript">
+				(function() {
+				 	var fab = new fabric.Canvas("progcv", {backgroundColor: 'rgb(200,200,200)'});
+					$("#langs").hide();
+					var lastPosition = 0;
+					var lastYear = 0, sameYearCount = 0;
+					var textObjs = [];
+
+
+					var points = [];
+
+					$("#langs > li").each(function(idx, obj) {
+						var first = 1990;
+						var year = parseInt($(obj).find('.year').html());
+						var lang = $(obj).find('.lang').html();
+						var imgURL = $(obj).find('.imgurl').html();
+						// pre-load
+						$("<img/>").attr('src', imgURL);
+						var diff = year - first;
+						var x =  20 + 35*idx;
+						var y =  220 + 150 * Math.sin(idx * Math.PI / 4);
+
+						if (lastYear == year) {
+							x -= 20 * (sameYearCount + 1);
+							sameYearCount++;
+						} else {
+							sameYearCount = 0;
+						}
+
+						var text = new fabric.Text(lang, {left: x, top: y, fontSize: 12});
+						lastPosition = x;
+						text.left = text.left - text.width/2;
+						fab.add(text);
+						diff = (y > 180)? -text.height : text.height ;
+						y = y + diff;
+						fab.add(new fabric.Line([x, y, x, 200], {stroke: 'red', strokeWidth:2,  originY: 'center'}));
+						fab.add(new fabric.Circle({left: x+2, top: 200, radius: 4, originX: 'center'}));
+						fab.add(new fabric.Circle({left: x+2, top: y, radius: 4, originX: 'center'}));
+						points.push({xx: x+2, yy: y});
+						if (lastYear != year) {
+							var yr = new fabric.Text(year.toString(), {left: x, top: 200 + diff * 0.8, fontSize: 8});
+							fab.add(yr);
+							textObjs.push({main: text, year: yr, img: imgURL});
+						} else {
+							textObjs.push({main: text, img: imgURL});
+						}
+						lastYear = year;
+					});
+
+					for (var i = 0; i < (points.length-3); ++i) {
+						var p1 = points[i], p2 = points[i+1], p3 = points[i+3];
+						var pathString = "M " + p1.xx + " " + p1.yy + " C "  + p2.xx + " " + p2.yy + " " + p3.xx + " " + p3.yy;
+						var pth = new fabric.Path(pathString);
+						console.log(pathString);
+						pth.fill = "rgba(255, 0, 0, 20)";
+						fab.add(pth);
+					}
+
+
+					// set chain animations
+					var idxAnim = 0, len = textObjs.length;
+					for (var i = 0; i < len; ++i) {
+						textObjs[i].main.bringToFront();
+					}
+					var nextAnim = function() { 
+						textObjs[idxAnim].main.fontSize = 12;
+						if (textObjs[idxAnim].year) {
+							textObjs[idxAnim].year.fill = 'black';
+						}
+						idxAnim = (idxAnim + 1) % len; 
+						$("#demoImage").attr('src', textObjs[idxAnim].img);
+						
+						textObjs[idxAnim].main.animate('fontSize', 20, {from: 12, duration: 1000, onChange: fab.renderAll.bind(fab),
+								onComplete: nextAnim});
+						if (textObjs[idxAnim].year) {
+							textObjs[idxAnim].year.fill = 'red';
+						}
+		
+					};
+					if (len > 0) {
+						setTimeout(function() { nextAnim(); }, 0);
+					}
+				 })();
+				</script>
+				<br/>
+			</div>
+		</div>
+	</body>
+</html>

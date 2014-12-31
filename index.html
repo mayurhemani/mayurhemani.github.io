@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>A Peacock's Eye View</title>
+		<meta name="keywords" content="Mayur Hemani, Website, Visualization, Design" />
+		<meta name="description" content="Home page for mayur hemani" />
+		<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>i
+		<link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
+		<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+		<style>
+			.body {
+				font-family: 'Open Sans Condensed', sans-serif;	
+			}
+			.with-border {
+				border: 1px solid #ccc;
+				background-color: #fdfdfd;
+				border-radius: 1px;
+				margin-bottom: 10px;
+				padding: 10px;
+			}
+			.with-border > p.header {
+				line-height: 34pt;
+				font-weight: bold;
+				font-size: 12pt;
+			}
+
+			.with-border > div {
+				width: 100%;
+			
+			}	
+			.page-header {
+				font-family: 'Audiowide', cursive;
+				font-size: 28pt;
+				color: #fdfdfd;
+				background-color: #222;
+			}
+		
+			li .ti {
+				font-weight: bold; 
+			}
+		
+			.image {
+				width: 250px;
+			}
+			
+	
+		</style>
+	</head>
+	<body>
+		<div class='page-header'>
+		std::make_unique(non_std::total_perspective_vortex());
+		</div>
+		
+		<div class="row body">
+			
+			<div class="intro col-xs-4 row">
+				<div class='col-xs-3' >
+					<img src="images/me.jpg" style='width:100px;'/>
+				</div>
+				<div class="col-xs-9">
+					<ul class='list-unstyled col-xs-8'>
+						<li><span class='ti'>Name:</span> Mayur Hemani</li>
+						<li><span class='ti'>Profession:</span>	Computer Programmer </li>
+						<li><span class='ti'>Looking for:</span> Peace in life (42), a PhD. advisor, and always up for a good south-Indian meal..</li> 
+					</ul>
+				</div>
+			</div>
+			
+			<div class='container col-xs-8 row'>
+
+				<div class="col-xs-12 with-border">
+					<p class="header">Happy New Year</p>
+					<div class="row">
+						<div class="col-xs-4">
+						</div>
+						<div class="col-xs-6">
+							Let the year 2015 be a good one.
+							<br/><br/><button class='btn' onclick="launchModal('hny');">Launch</button>
+						</div>
+					</div>
+					<div class="modal fade bs-example-modal-lg" id="hny" tabindex="-1" role="dialog" aria-labelledby="hnyLabel" aria-hidden="true">
+						<div class="modal-dialog modal-lg">
+					    	<div class="modal-content">
+					      		<div class="modal-header">
+					        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					        			<span aria-hidden="true">&times;</span></button>
+					        		<h4 class="modal-title" id="myModalLabel">A Polarized World</h4>
+					      		</div>
+					      		<div class="modal-body">
+					        		<iframe  id="hny_html" width="100%" height="500px"></iframe>
+					      		</div>
+				
+					    	</div>
+					  	</div>
+					</div>
+				</div>
+
+				<div class="with-border col-xs-12">
+					<p class="header">Birds Flocking Behind a Leader</p>
+					<div class='row'>
+						<div class='col-xs-4'>
+							<img src="images/swarm_leader.png" class="image" />
+						</div>
+						<div class='col-xs-6'>The world begins with chaos. Birds muck about the world, banging their heads against the wall. Then when they come in contact with a leader, they begin to follow him. Sure enough, the world becomes polarized and organized. But some, followers go out of phase and the chaos returns. And so on in cycles. There must be truth in what he says...
+							<br/><br/><button class='btn' onclick="launchModal('swarmModal');">Launch</button>
+					   	</div>
+					</div>
+					<div class="modal fade bs-example-modal-lg" id="swarmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-dialog modal-lg">
+					    	<div class="modal-content">
+					      		<div class="modal-header">
+					        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					        			<span aria-hidden="true">&times;</span></button>
+					        		<h4 class="modal-title" id="myModalLabel">A Polarized World</h4>
+					      		</div>
+					      		<div class="modal-body">
+					        		<iframe  id="swarm_html" width="100%" height="450px"></iframe>
+					      		</div>
+				
+					    	</div>
+					  	</div>
+					</div>
+				</div>	
+
+
+				<div class="col-xs-12 with-border">
+					<p class="header">Preferential Attachment Gone Bad</p>
+					<div class='row'>
+						<div class='col-xs-4'>
+							<img src="infodif.png" class="image" />
+						</div>
+						<div class='col-xs-6'>
+						My first ever venture into research... done with ICWSM 2007 dataset. The general idea is that too many cooks spoil the broth.. or in this case, improve the overall discoverability of the long tail.
+							<br/><br/><button class='btn'>Launch</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-xs-12 with-border">
+					<p class='header'>How numbers color our world</p>
+					<div class='row'>
+						<div class='col-xs-4'>
+							<img src='images/Lenna.png' class="image">
+						</div>
+						<div class='col-xs-6'>
+						The 3D visualization of where the colors of an image figure in the L*A*B* world (statistically). Pixels are translated to the L*a*b* space and clustered by k-means (k=5). The RGB gamut mapped to LAB coordinates are then used to visualize the positions of these pixels. 
+							<br/><br/><button class='btn'>Launch</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+		<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+		function launchModal(modalId) {
+			if (modalId === "swarmModal") {
+				document.getElementById("swarm_html").setAttribute("src", "swarm.html");
+			}
+			$("#" + modalId).modal();
+		}
+		</script>
+	</body>
+</html>

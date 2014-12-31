@@ -1,0 +1,15 @@
+body {
+	background-color: #222;
+}
+
+.container {
+	width: 1024px;
+	margin: auto;
+}
+
+
+canvas {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
