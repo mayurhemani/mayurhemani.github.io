@@ -86,7 +86,7 @@
 					      		<div class="modal-header">
 					        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					        			<span aria-hidden="true">&times;</span></button>
-					        		<h4 class="modal-title" id="myModalLabel">A Polarized World</h4>
+					        		<h4 class="modal-title">Happy New Year</h4>
 					      		</div>
 					      		<div class="modal-body">
 					        		<iframe  id="hny_html" width="100%" height="500px"></iframe>
@@ -133,8 +133,23 @@
 						</div>
 						<div class='col-xs-6'>
 						My first ever venture into research... done with ICWSM 2007 dataset. The general idea is that too many cooks spoil the broth.. or in this case, improve the overall discoverability of the long tail.
-							<br/><br/><button class='btn'>Launch</button>
+							<br/><br/><button class='btn' onclick="launchModal('icwsm');">Launch</button>
 						</div>
+					</div>
+					<div class="modal fade bs-example-modal-lg" id="icwsm" tabindex="-1" role="dialog" aria-labelledby="clrsLabel" aria-hidden="true">
+						<div class="modal-dialog modal-lg">
+					    	<div class="modal-content">
+					      		<div class="modal-header">
+					        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					        			<span aria-hidden="true">&times;</span></button>
+					        		<h4 class="modal-title">Preferential Attachment Gone Bad</h4>
+					      		</div>
+					      		<div class="modal-body">
+					        		<iframe  id="icwsm_html" width="100%" height="500px"></iframe>
+					      		</div>
+				
+					    	</div>
+					  	</div>
 					</div>
 				</div>
 
@@ -146,8 +161,23 @@
 						</div>
 						<div class='col-xs-6'>
 						The 3D visualization of where the colors of an image figure in the L*A*B* world (statistically). Pixels are translated to the L*a*b* space and clustered by k-means (k=5). The RGB gamut mapped to LAB coordinates are then used to visualize the positions of these pixels. 
-							<br/><br/><button class='btn'>Launch</button>
+							<br/><br/><button class='btn' onclick="launchModal('clrs');">Launch</button>
 						</div>
+					</div>
+					<div class="modal fade bs-example-modal-lg" id="clrs" tabindex="-1" role="dialog" aria-labelledby="clrsLabel" aria-hidden="true">
+						<div class="modal-dialog modal-lg">
+					    	<div class="modal-content">
+					      		<div class="modal-header">
+					        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					        			<span aria-hidden="true">&times;</span></button>
+					        		<h4 class="modal-title">Color Cluster Visualization</h4>
+					      		</div>
+					      		<div class="modal-body">
+					        		<iframe  id="clrs_html" width="100%" height="500px"></iframe>
+					      		</div>
+				
+					    	</div>
+					  	</div>
 					</div>
 				</div>
 			</div>
@@ -159,6 +189,12 @@
 		function launchModal(modalId) {
 			if (modalId === "swarmModal") {
 				document.getElementById("swarm_html").setAttribute("src", "swarm.html");
+			} else if (modalId === "hny") {
+				document.getElementById("hny_html").setAttribute("src", "hero.html");
+			} else if (modalId === "clrs") {
+				document.getElementById("clrs_html").setAttribute("src", "colors.html");
+			} else if (modalId === "icwsm") {
+				document.getElementById("icwsm_html").setAttribute("src", "https://docs.google.com/file/d/0Byrd5rpjdqiJR0NWNDFwbWZwODg/preview?pli=1");
 			}
 			$("#" + modalId).modal();
 		}
