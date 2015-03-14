@@ -19,5 +19,14 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "_release": "0.70.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.70.0",
+    "commit": "6515b3d4a115303f02e1f0e737aaeddcc866688c"
+  },
+  "_source": "git://github.com/jiyinyiyong/three.js.git",
+  "_target": "*",
+  "_originalSource": "three.js"
 }

@@ -50,9 +50,9 @@
 				geomObj.geometry.vertices[i].z += sint;
 
 
-				geomObj.geometry.colors[i].r =  Math.random();
-				geomObj.geometry.colors[i].g = Math.random();
-				geomObj.geometry.colors[i].b = Math.abs(z);
+				// geomObj.geometry.colors[i].r =  Math.random();
+				// geomObj.geometry.colors[i].g = Math.random();
+				// geomObj.geometry.colors[i].b = Math.abs(z);
 			}
 			globals.theta += globals.dtheta;
 			geomObj.geometry.needsUpdate = true;
@@ -72,13 +72,13 @@
 				y = geomObj.geometry.vertices[i].y,
 				z = geomObj.geometry.vertices[i].z;
 
-				geomObj.geometry.vertices[i].y +=  (x - globals.xmin) * Math.sin( (x - 5*t) / 30.0) / 120.0;
+				geomObj.geometry.vertices[i].y +=  (x - globals.xmin) * Math.sin( (x - 5*t) / 30.0) / 100.0;
 				geomObj.geometry.vertices[i].z += sint;
 				geomObj.geometry.vertices[i].x += cost;
 
-				geomObj.geometry.colors[i].r =  Math.random();
-				geomObj.geometry.colors[i].g = Math.random();
-				geomObj.geometry.colors[i].b = Math.abs(z);
+				//geomObj.geometry.colors[i].r =  Math.random();
+				//geomObj.geometry.colors[i].g = Math.random();
+				//geomObj.geometry.colors[i].b = Math.abs(z);
 			}
 			globals.theta += globals.dtheta;
 			geomObj.geometry.needsUpdate = true;
@@ -145,22 +145,22 @@
 
 			var geom = new THREE.Geometry();
 			var i, wh = WIDTH, ht = HEIGHT, whalf = WIDTH/2, hthalf = HEIGHT/2;
-			for (i = 0; i < 2000; ++i) {
+			for (i = 0; i < 3000; ++i) {
 				geom.vertices.push(
 						new THREE.Vector3(
 							wh * Math.random() - whalf, 
 							ht * Math.random() - hthalf,
-							Math.random() * 100.0)
+							Math.random() * 200.0)
 					);
 				geom.colors.push(new THREE.Color(
-						Math.random(), Math.random(), Math.random()
+						0.1, 0.5 + 0.5 * Math.random(), 0.5 + 0.5 * Math.random()
 					));
 			}
 			// materia
 			var material = new THREE.PointCloudMaterial( {
-			    size: 5,
+			    size: 10,
 			    transparent: true,
-			    opacity: 0.9,
+			    opacity: 0.3,
 			    vertexColors: THREE.VertexColors
 			} );
 
@@ -198,14 +198,13 @@
 			globals.textObj.position.y = 50;
 			globals.textObj.position.x = -50;
 
-			//globals.object.scale.set(70, 70, 70);
-			//globals.object.position.set(-200, 50, 0);
 			globals.scene.add(globals.object);
 			globals.object.geometry.dynamic = true;
 			globals.object.geometry.verticesNeedUpdate = true;
 			globals.object.geometry.colorsNeedUpdate = true;
 			globals.object.geometry.normalsNeedUpdate = true;	
 			globals.object.geometry.computeBoundingBox();
+			globals.object.rotation.y = -15; // new THREE.Vector3(0, 10.0, 0);
 			globals.xrange = globals.object.geometry.boundingBox.max.x - globals.object.geometry.boundingBox.min.x;
 			globals.yrange = globals.object.geometry.boundingBox.max.y - globals.object.geometry.boundingBox.min.y;
 			globals.zrange = globals.object.geometry.boundingBox.max.z - globals.object.geometry.boundingBox.min.z; 
