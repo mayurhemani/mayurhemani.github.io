@@ -1,0 +1,33 @@
+{
+  "name": "event.js",
+  "main": "dist/event.min.js",
+  "authors": [
+    "vallabh joshi <vallabh.joshi@gmail.com>"
+  ],
+  "description": "A module that can be mixed in to *any object* in order to provide it with custom events. You may bind with `on` or remove with `off` callback functions to an event; `trigger`-ing an event fires all callbacks in succession.",
+  "keywords": [
+    "object events",
+    "event",
+    "event js"
+  ],
+  "license": "MIT",
+  "private": false,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "homepage": "https://github.com/valllabh/event.js",
+  "_release": "badd1e42a9",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "badd1e42a9134cb168cd9b47dbb51e4cd7ed065b"
+  },
+  "_source": "git://github.com/valllabh/event.js.git",
+  "_target": "*",
+  "_originalSource": "event.js",
+  "_direct": true
+}

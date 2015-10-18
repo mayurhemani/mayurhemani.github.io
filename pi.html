@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+	</head>
+	<body>
+
+		<button onclick="handle();">Click</button>
+		<br/>
+		<canvas id="cv" width="3192" height="3192" />
+		<script type="text/javascript">
+
+		function plot_obj(radius, startTheta) {
+			this.radius = radius ? radius : 10;
+			this.theta = startTheta;
+		}
+
+		plot_obj.prototype.compute = function(theta, offset) {
+			var r = this.radius + offset;
+			this.radius += Math.PI / 5.0;
+			return {
+				x:  1648 + r * Math.cos(theta),
+				y:  1648 - r * Math.sin(theta)
+			};
+		};
+		plot_obj.prototype.computeColor = function(val) {
+			return {
+				r: (val > 5) ? parseInt(val * 51.0) : 0,
+				g: (val < 5) ? parseInt((5 - val) * 51.0) : 0,
+				b: 0
+			};
+		};
+
+
+		function cv(id, plot) {
+			var canvas = document.getElementById(id);
+			this.ctx = canvas.getContext('2d');
+			this.ctx.strokeStyle = "#000";
+			this.width = $(canvas).width();
+			this.height = $(canvas).height();
+			this.plot = plot;
+			// move to the starting point
+			var pt = plot.compute(0, 0);
+			//this.ctx.moveTo(pt.x, pt.y);
+			this.px = pt.x;
+			this.py = pt.y;
+			this.ctx.lineWidth = 10;
+			this.ctx.strokeStyle = "rgba(120, 120, 120, 0.8)";
+		}
+
+		cv.prototype.drawLine = function(theta, offset) {
+			var pt = this.plot.compute(theta, offset);
+			var clr = 0.1 + offset * offset / 100.0; 
+			var grn = parseInt(2550.0 / (1 + offset));
+			var red = 255 - grn;
+			var rgb = this.plot.computeColor(offset);
+			this.ctx.beginPath();
+			this.ctx.moveTo(this.px, this.py);
+			this.ctx.strokeStyle = "rgba(" + red + ", " + grn + ",120, 0.1)";
+			this.ctx.lineTo(pt.x, pt.y);
+			this.ctx.stroke();
+			this.ctx.moveTo(this.px, this.py);
+			//this.ctx.fillStyle = "rgba(" + red + ", " + grn + ", 50, 0.8)";
+			this.ctx.arc(pt.x, pt.y, offset + 1, 0, 2 * Math.PI);
+			this.ctx.fill();
+			this.px = pt.x;
+			this.py = pt.y;
+		};
+
+
+		function parseAndPlot(cv, data) {
+			var theta = 0;
+			for (var i = 0; i < 2000; ++i, theta += 20.0/ cv.plot.radius) {
+				var off = parseInt(data.charAt(i));
+			    cv.drawLine(theta, off);
+			}
+		}
+
+
+		function loadAndParse(cv) {
+			$.ajax("data/pi.txt", { method: "GET" }).done(function(data) {
+				parseAndPlot(cv, data);
+			});
+		}
+
+		function handle() {
+			var c = new cv("cv", new plot_obj(100, 0));
+			loadAndParse(c);
+		}
+
+		</script>
+	</body>
+</html>

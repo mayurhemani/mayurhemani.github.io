@@ -6,14 +6,17 @@
 		<meta name="description" content="Home page for mayur hemani" />
 		<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>i
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
 		<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+		<link href="bower_components/highlightjs/styles/monokai.css" type="text/css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="bower_components/magnifierjs/magnifier.css" />
+		<script type="bower_components/MathJax/Mathjax.js"></script>
 		<style>
 			.body {
 				font-family: 'Open Sans Condensed', sans-serif;	
 			}
-			.with-border {
+			.template {
 				border: 1px solid #ccc;
 				background-color: #fdfdfd;
 				border-radius: 1px;
@@ -45,159 +48,272 @@
 				width: 250px;
 			}
 			
+			.entries {
+				display: none;
+			}
+			.entryImage {
+				width: 70%;
+			}
+			.entryHeader {
+				font-size: 20pt;
+			}
+			#hbody {
+				width: 900px;
+				margin: auto;
+			}
+			.entryBtn {
+				float: right;
+			}
 	
 		</style>
 	</head>
 	<body>
 		<div class='page-header'>
-		std::make_unique(non_std::total_perspective_vortex());
+			std::move(std::forward()); using pedestals = life.problems;
 		</div>
 		
-		<div class="row body">
+		<div class="row-fluid body">
 			
-			<div class="intro col-xs-4 row">
-				<div class='col-xs-3' >
-					<img src="images/me.jpg" style='width:100px;'/>
-				</div>
-				<div class="col-xs-9">
-					<ul class='list-unstyled col-xs-8'>
-						<li><span class='ti'>Name:</span> Mayur Hemani</li>
-						<li><span class='ti'>Profession:</span>	Computer Programmer </li>
-						<li><span class='ti'>Looking for:</span> Peace in life (42), a PhD. advisor, and always up for a good south-Indian meal..</li> 
-					</ul>
-				</div>
-			</div>
-			
-			<div class='container col-xs-8 row'>
-
-				<div class="col-xs-12 with-border">
-					<p class="header">Happy New Year</p>
-					<div class="row">
-						<div class="col-xs-4">
-						</div>
-						<div class="col-xs-6">
-							Let the year 2015 be a good one.
-							<br/><br/><button class='btn' onclick="launchModal('hny');">Launch</button>
-						</div>
+			<div class="intro col-xs-4">
+				<div class="row-fluid">
+					<div class="col-xs-3" >
+						<img src="images/me.jpg" width="100%"/>
 					</div>
-					<div class="modal fade bs-example-modal-lg" id="hny" tabindex="-1" role="dialog" aria-labelledby="hnyLabel" aria-hidden="true">
-						<div class="modal-dialog modal-lg">
-					    	<div class="modal-content">
-					      		<div class="modal-header">
-					        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					        			<span aria-hidden="true">&times;</span></button>
-					        		<h4 class="modal-title">Happy New Year</h4>
-					      		</div>
-					      		<div class="modal-body">
-					        		<iframe  id="hny_html" width="100%" height="500px"></iframe>
-					      		</div>
-				
-					    	</div>
-					  	</div>
-					</div>
-				</div>
-
-				<div class="with-border col-xs-12">
-					<p class="header">Birds Flocking Behind a Leader</p>
-					<div class='row'>
-						<div class='col-xs-4'>
-							<img src="images/swarm_leader.png" class="image" />
-						</div>
-						<div class='col-xs-6'>The world begins with chaos. Birds muck about the world, banging their heads against the wall. Then when they come in contact with a leader, they begin to follow him. Sure enough, the world becomes polarized and organized. But some, followers go out of phase and the chaos returns. And so on in cycles. There must be truth in what he says...
-							<br/><br/><button class='btn' onclick="launchModal('swarmModal');">Launch</button>
-					   	</div>
-					</div>
-					<div class="modal fade bs-example-modal-lg" id="swarmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-						<div class="modal-dialog modal-lg">
-					    	<div class="modal-content">
-					      		<div class="modal-header">
-					        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					        			<span aria-hidden="true">&times;</span></button>
-					        		<h4 class="modal-title" id="myModalLabel">A Polarized World</h4>
-					      		</div>
-					      		<div class="modal-body">
-					        		<iframe  id="swarm_html" width="100%" height="450px"></iframe>
-					      		</div>
-				
-					    	</div>
-					  	</div>
-					</div>
-				</div>	
-
-
-				<div class="col-xs-12 with-border">
-					<p class="header">Preferential Attachment Gone Bad</p>
-					<div class='row'>
-						<div class='col-xs-4'>
-							<img src="infodif.png" class="image" />
-						</div>
-						<div class='col-xs-6'>
-						My first ever venture into research... done with ICWSM 2007 dataset. The general idea is that too many cooks spoil the broth.. or in this case, improve the overall discoverability of the long tail.
-							<br/><br/><button class='btn' onclick="launchModal('icwsm');">Launch</button>
-						</div>
-					</div>
-					<div class="modal fade bs-example-modal-lg" id="icwsm" tabindex="-1" role="dialog" aria-labelledby="clrsLabel" aria-hidden="true">
-						<div class="modal-dialog modal-lg">
-					    	<div class="modal-content">
-					      		<div class="modal-header">
-					        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					        			<span aria-hidden="true">&times;</span></button>
-					        		<h4 class="modal-title">Preferential Attachment Gone Bad</h4>
-					      		</div>
-					      		<div class="modal-body">
-					        		<iframe  id="icwsm_html" width="100%" height="500px"></iframe>
-					      		</div>
-				
-					    	</div>
-					  	</div>
-					</div>
-				</div>
-
-				<div class="col-xs-12 with-border">
-					<p class='header'>How numbers color our world</p>
-					<div class='row'>
-						<div class='col-xs-4'>
-							<img src='images/Lenna.png' class="image">
-						</div>
-						<div class='col-xs-6'>
-						The 3D visualization of where the colors of an image figure in the L*A*B* world (statistically). Pixels are translated to the L*a*b* space and clustered by k-means (k=5). The RGB gamut mapped to LAB coordinates are then used to visualize the positions of these pixels. 
-							<br/><br/><button class='btn' onclick="launchModal('clrs');">Launch</button>
-						</div>
-					</div>
-					<div class="modal fade bs-example-modal-lg" id="clrs" tabindex="-1" role="dialog" aria-labelledby="clrsLabel" aria-hidden="true">
-						<div class="modal-dialog modal-lg">
-					    	<div class="modal-content">
-					      		<div class="modal-header">
-					        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					        			<span aria-hidden="true">&times;</span></button>
-					        		<h4 class="modal-title">Color Cluster Visualization</h4>
-					      		</div>
-					      		<div class="modal-body">
-					        		<iframe  id="clrs_html" width="100%" height="500px"></iframe>
-					      		</div>
-				
-					    	</div>
-					  	</div>
+					<div class="col-xs-9">
+						<ul class='list-unstyled'>
+							<li><span class='ti'>Name:</span> Mayur Hemani</li>
+							<li><span class='ti'>Profession:</span>	Computer Programmer </li>
+							<li><span class='ti'>Looking for:</span> Peace in life (42), a PhD. advisor, and always up for a good south-Indian meal..</li> 
+						</ul>
 					</div>
 				</div>
 			</div>
+
+			<!-- actual container -->
+			<div id="hbody" class="container col-xs-9"></div>
+
+			<!-- template -->			
+			<div id="template" class="template container col-xs-8">
+				<div class="rowFluid">
+					<div class="rowText">
+						<div class="entryHeader"></div>
+						<div class="entryBody"></div>
+						<button class="entryBtn">Launch</button>
+					</div>
+					<div class="rowImage" >
+						<img class="entryImage" />
+					</div>
+				</div>
+			</div>
+
+			<!-- modal dialog template -->
+			<div id="modalDialog" class="modal fade bs-example-modal-lg" id="modalDlg" tabindex="-1" role="dialog" aria-hidden="true">
+				<div class="modal-dialog modal-lg">
+			    	<div class="modal-content">
+			      		<div class="modal-header">
+			        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			        			<span aria-hidden="true">&times;</span></button>
+			        		<h4 class="modal-title" id="modalTitle"></h4>
+			      		</div>
+			      		<div class="modal-body">
+			        		<iframe  id="modalURL" width="100%" height="500px"></iframe>
+			      		</div>
+		
+			    	</div>
+			  	</div>
+			</div>
+
+			<div class="entries">
+				<div class="entry">
+					<div class="header">Visualizing &pi;</div>
+					<div class="text">How does one visualize the digits of PI? This is an attempt to use emphasis by repetition to visualize the dataset. More than one dimensions of the visualization are mapped to the digits to produce exquisite maps of the digits. </div>
+					<div class="image">images/pi5.png</div>
+					<div class="url">pi.html</div>
+				</div>
+				<div class="entry">
+					<div class="header">Rocking Waves</div>
+					<div class="image">images/hny.png</div>
+					<div class="text">How do the waves rock about? </div>
+					<div class="url">hero.html</div>
+				</div>
+				<div class="entry">
+					<div class="header">Birds Flocking Behind a Leader</div>
+					<div class="text">The world begins with chaos. Birds muck about the world, banging their heads against the wall. Then when they come in contact with a leader, they begin to follow him. Sure enough, the world becomes polarized and organized. But some, followers go out of phase and the chaos returns. And so on in cycles. There must be truth in what he says... </div>
+					<div class="image">images/swarm_leader.png</div>
+					<div class="url">swarm.html</div>
+				</div>
+				<div class="entry">
+					<div class="header">Preferential Attachment Gone Bad</div>
+					<div class="text">My first ever venture into research... done with ICWSM 2007 dataset. The general idea is that too many cooks spoil the broth.. or in this case, improve the overall discoverability of the long tail. </div>
+					<div class="image">images/infodif.png</div>
+					<div class="url">https://docs.google.com/file/d/0Byrd5rpjdqiJR0NWNDFwbWZwODg/preview?pli=1</div>
+				</div>
+				<div class="entry">
+					<div class="header">Sierpinski Gasket</div>
+					<div class="text">
+						<pre>
+							<code class="cpp">
+#include &lt;cstdio&gt;
+#include &lt;graphics.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;vector&gt;
+#include &lt;cstdlib&gt;
+#include &lt;windows.h&gt;
+
+typedef std::pair<int, int> point2D;
+typedef std::vector<point2D> pointVec;
+
+int main()
+{
+  int gd=DETECT, gm=0;
+  initgraph(&amp;gd, &amp;gm, "RGB");
+
+  pointVec triangle(3);
+
+  triangle[0] = std::make_pair(300, 20);
+  triangle[1] = std::make_pair(0, 450);
+  triangle[2] = std::make_pair(600, 450);
+
+  point2D p(std::make_pair(140, 50));
+
+  for (int i = 0; i < 15000; ++i) {
+    short j = rand()  % 3;
+
+    putpixel(p.first, p.second, RGB(205, p.first%255, 120));
+
+    p = std::make_pair((triangle[j].first + p.first) / 2, (triangle[j].second + p.second) / 2);
+  }
+
+  getch();
+  closegraph();
+  return 0;
+}
+							</code>
+						</pre>
+					</div>
+					<div class="image">images/sierpinski.png</div>
+				</div>
+				<div class="entry">
+					<div class="header">How numbers color our world</div>
+					<div class="text">The 3D visualization of where the colors of an image figure in the L*A*B* world (statistically). Pixels are translated to the L*a*b* space and clustered by k-means (k=5). The RGB gamut mapped to LAB coordinates are then used to visualize the positions of these pixels. </div>
+					<div class="image">images/Lenna.png</div>
+					<div class="url">colors.html</div>
+				</div>
+				<div class="entry">
+					<div class="header">Julia Sets</div>
+					<div class="text">
+						<pre>
+							<code class="cpp">
+// determine the pixel color according to the fractal in question
+int get_pix_color(long x, long y, double fx, double fy)
+{
+	double scaled_x = (x - 320.0)/320.0;
+	double scaled_y = (y - 240.0)/240.0;
+	cplx p(fx, fy);
+	cplx z(scaled_x, scaled_y);
+	short cnt = 0;
+	while (z() < 4 && cnt < 100) {
+		z = evaluate(z, p);
+		cnt++;
+	}
+	return get_color_for_count(cnt);
+}
+
+int main()
+{
+    double fx = 0, fy = 0;
+	std::cin >> fx >> fy;
+
+	int gd=DETECT, gm=0;
+	initgraph(&gd, &gm, "RGB");
+
+	for (short x = 0; x < 640; ++x) {
+		for (short y = 0; y < 480; ++y) {
+			putpixel(x, y, get_pix_color(x, y, fx, fy));
+		}
+	}
+
+	getch();
+	closegraph();
+	return 0;
+}
+							</code>
+						</pre>
+					</div>
+					<div class="image">images/frac1.png</div>
+				</div>
+				<div class="entry">
+					<div class="header">Mandelbrot Set</div>
+					<div class="text">
+						<pre>
+							<code class="cpp">
+#include &lt;graphics.h&gt;
+#include &lt;math.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;iostream.h&gt;
+
+struct cplx {
+    double real;
+    double imag;
+    cplx():real(0), imag(0) {}
+    cplx(double r, double i):real(r), imag(i) {}
+    double operator()(void) const {
+        return (real * real + imag * imag);
+    }
+};
+
+// This function determines the polynomial Z^2 + C
+cplx evaluate(cplx const& z, cplx const& c)
+{
+    cplx res;
+    res.real = z.real * z.real - z.imag * z.imag + c.real;
+    res.imag = 2 * z.real * z.imag + c.imag;
+    return res;
+}
+
+short get_pix_color(long x, long y)
+{
+    double scaled_x = (x - 320.0)/320.0; // screen resolution's only 640x480
+    double scaled_y = (y - 240.0)/240.0;
+    cplx p(scaled_x, scaled_y);
+    cplx z;
+    short cnt = 0;
+    while (z() < 4 && cnt < 100) {
+        z = evaluate(z, p);
+        cnt++;
+    }
+    return cnt%16; // 'cause there'll only 16 colors (duh!!)
+}
+
+void main()
+{
+    int gd=DETECT, gm=0;
+    initgraph(&gd, &gm, "C:\\tc\\bgi");
+
+    for (short x = 0; x < 640; ++x) {
+        for (short y = 0; y < 480; ++y) {
+            putpixel(x, y, get_pix_color(x, y));
+        }
+    }
+
+    getch();
+    closegraph();
+}
+							</code>
+						</pre>
+					</div>
+					<div class="image">images/mandelbrot.png</div>
+				</div>
+			</div>
+
 		</div>
 		
 		<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
 		<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-		<script type="text/javascript">
-		function launchModal(modalId) {
-			if (modalId === "swarmModal") {
-				document.getElementById("swarm_html").setAttribute("src", "swarm.html");
-			} else if (modalId === "hny") {
-				document.getElementById("hny_html").setAttribute("src", "hero.html");
-			} else if (modalId === "clrs") {
-				document.getElementById("clrs_html").setAttribute("src", "colors.html");
-			} else if (modalId === "icwsm") {
-				document.getElementById("icwsm_html").setAttribute("src", "https://docs.google.com/file/d/0Byrd5rpjdqiJR0NWNDFwbWZwODg/preview?pli=1");
-			}
-			$("#" + modalId).modal();
-		}
+		<script type="text/javascript" src="bower_components/highlightjs/highlight.pack.min.js"></script>
+		<script type="text/javascript" src="bower_components/event.js/dist/Event.js"></script>
+		<script type="text/javascript" src="bower_components/magnifierjs/Magnifier.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
 		</script>
 	</body>
 </html>
