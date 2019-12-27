@@ -1,319 +1,104 @@
-<!DOCTYPE html>
+<!DOCTYPE html encoding="UTF-8">
 <html>
 	<head>
-		<title>A Peacock's Eye View</title>
-		<meta name="keywords" content="Mayur Hemani, Website, Visualization, Design" />
-		<meta name="description" content="Home page for mayur hemani" />
+		<title>Mayur Hemani Github</title>
+		<meta name="keywords" content="Mayur Hemani, Website, Visualization, Deep Learning, Bio" />
+		<meta name="description" content="Github Page Mayur Hemani" />
 		<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
-		<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
-		<link href="bower_components/highlightjs/styles/monokai.css" type="text/css" rel="stylesheet" />
-		<link rel="stylesheet" type="text/css" href="bower_components/magnifierjs/magnifier.css" />
-		<script type="bower_components/MathJax/Mathjax.js"></script>
-		<style>
-			.body {
-				font-family: 'Open Sans Condensed', sans-serif;	
-			}
-			.template {
-				border: 1px solid #ccc;
-				background-color: #fdfdfd;
-				border-radius: 1px;
-				margin-bottom: 10px;
-				padding: 10px;
-			}
-			.with-border > p.header {
-				line-height: 34pt;
-				font-weight: bold;
-				font-size: 12pt;
-			}
-
-			.with-border > div {
-				width: 100%;
-			
-			}	
-			.page-header {
-				font-family: 'Audiowide', cursive;
-				font-size: 28pt;
-				color: #fdfdfd;
-				background-color: #222;
-			}
-		
-			li .ti {
-				font-weight: bold; 
-			}
-		
-			.image {
-				width: 250px;
-			}
-			
-			.entries {
-				display: none;
-			}
-			.entryImage {
-				width: 70%;
-			}
-			.entryHeader {
-				font-size: 20pt;
-			}
-			#hbody {
-				width: 900px;
-				margin: auto;
-			}
-			.entryBtn {
-				float: right;
-			}
-	
-		</style>
+		<link href="css/main.css" type="text/css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
 	<body>
-		<div class='page-header'>
-			std::move(std::forward()); using pedestals = life.problems;
-		</div>
-		
-		<div class="row-fluid body">
-			
-			<div class="intro col-xs-4">
-				<div class="row-fluid">
-					<div class="col-xs-3" >
-						<img src="images/me.jpg" width="100%"/>
+		<header>
+			Mayur Hemani's Github Home Page
+		</header>
+		<main>
+			<section>
+				<div class="header">About</div>
+				<div class="row">
+					<div class="col" style="vertical-align: middle;">
+						<img src="images/sketch_out_001.jpg" style="width: 150px;">
 					</div>
-					<div class="col-xs-9">
-						<ul class='list-unstyled'>
-							<li><span class='ti'>Name:</span> Mayur Hemani</li>
-							<li><span class='ti'>Profession:</span>	Computer Programmer </li>
-							<li><span class='ti'>Looking for:</span> Peace in life (42), a PhD. advisor, and always up for a good south-Indian meal..</li> 
-						</ul>
+					<div class="col sep"></div>
+					<div class="col">
+						<b>Mayur Hemani</b> <br/>
+						* Love Computer Programming.<br/>
+						* Fascinated by 2D/3D Graphics.<br/>
+						* Interested in Science and Research.<br/>
+						* Work in Computer Vision and Retrieval.<br/> <br/>
+						<i class="fa fa-linkedin-square"></i> &nbsp; <a href="https://www.linkedin.com/in/mayur-hemani-6392b85/">LinkedIn Profile</a> <br/>
+						<i class="fa fa-medium"></i> &nbsp; <a href="https://medium.com/@mayurhemani">Blog</a><br/>
 					</div>
-				</div>
-			</div>
-
-			<!-- actual container -->
-			<div id="hbody" class="container col-xs-9"></div>
-
-			<!-- template -->			
-			<div id="template" class="template container col-xs-8">
-				<div class="rowFluid">
-					<div class="rowText">
-						<div class="entryHeader"></div>
-						<div class="entryBody"></div>
-						<button class="entryBtn">Launch</button>
-					</div>
-					<div class="rowImage" >
-						<img class="entryImage" />
+					<div class="col sep"></div>
+					<div class="col">
+						<b>Currently</b><br/>
+						* Full-time in CV Research+Engineering <br/>
+						* Wrapping my head around deep RL.<br/>
 					</div>
 				</div>
-			</div>
-
-			<!-- modal dialog template -->
-			<div id="modalDialog" class="modal fade bs-example-modal-lg" id="modalDlg" tabindex="-1" role="dialog" aria-hidden="true">
-				<div class="modal-dialog modal-lg">
-			    	<div class="modal-content">
-			      		<div class="modal-header">
-			        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			        			<span aria-hidden="true">&times;</span></button>
-			        		<h4 class="modal-title" id="modalTitle"></h4>
-			      		</div>
-			      		<div class="modal-body">
-			        		<iframe  id="modalURL" width="100%" height="500px"></iframe>
-			      		</div>
-		
-			    	</div>
-			  	</div>
-			</div>
-
-			<div class="entries">
-				<div class="entry">
-					<div class="header">Visualizing &pi;</div>
-					<div class="text">How does one visualize the digits of PI? This is an attempt to use emphasis by repetition to visualize the dataset. More than one dimensions of the visualization are mapped to the digits to produce exquisite maps of the digits. </div>
-					<div class="image">images/pi5.png</div>
-					<div class="url">pi.html</div>
+			</section>
+			<section>
+				<div class="header">
+					Current Projects
 				</div>
-				<div class="entry">
-					<div class="header">Rocking Waves</div>
-					<div class="image">images/hny.png</div>
-					<div class="text">How do the waves rock about? </div>
-					<div class="url">hero.html</div>
+				<div class="row">
+					Soon..
 				</div>
-				<div class="entry">
-					<div class="header">Birds Flocking Behind a Leader</div>
-					<div class="text">The world begins with chaos. Birds muck about the world, banging their heads against the wall. Then when they come in contact with a leader, they begin to follow him. Sure enough, the world becomes polarized and organized. But some, followers go out of phase and the chaos returns. And so on in cycles. There must be truth in what he says... </div>
-					<div class="image">images/swarm_leader.png</div>
-					<div class="url">swarm.html</div>
+			</section>
+			<section>
+				<div class="header">
+					Past Projects
 				</div>
-				<div class="entry">
-					<div class="header">Preferential Attachment Gone Bad</div>
-					<div class="text">My first ever venture into research... done with ICWSM 2007 dataset. The general idea is that too many cooks spoil the broth.. or in this case, improve the overall discoverability of the long tail. </div>
-					<div class="image">images/infodif.png</div>
-					<div class="url">https://docs.google.com/file/d/0Byrd5rpjdqiJR0NWNDFwbWZwODg/preview?pli=1</div>
-				</div>
-				<div class="entry">
-					<div class="header">Sierpinski Gasket</div>
-					<div class="text">
-						<pre>
-							<code class="cpp">
-#include &lt;cstdio&gt;
-#include &lt;graphics.h&gt;
-#include &lt;conio.h&gt;
-#include &lt;vector&gt;
-#include &lt;cstdlib&gt;
-#include &lt;windows.h&gt;
-
-typedef std::pair<int, int> point2D;
-typedef std::vector<point2D> pointVec;
-
-int main()
-{
-  int gd=DETECT, gm=0;
-  initgraph(&amp;gd, &amp;gm, "RGB");
-
-  pointVec triangle(3);
-
-  triangle[0] = std::make_pair(300, 20);
-  triangle[1] = std::make_pair(0, 450);
-  triangle[2] = std::make_pair(600, 450);
-
-  point2D p(std::make_pair(140, 50));
-
-  for (int i = 0; i < 15000; ++i) {
-    short j = rand()  % 3;
-
-    putpixel(p.first, p.second, RGB(205, p.first%255, 120));
-
-    p = std::make_pair((triangle[j].first + p.first) / 2, (triangle[j].second + p.second) / 2);
-  }
-
-  getch();
-  closegraph();
-  return 0;
-}
-							</code>
-						</pre>
+				<div class="row">
+					<div class="col">
+						 <img src="images/op4.jpg" style="width:250px;" />
 					</div>
-					<div class="image">images/sierpinski.png</div>
-				</div>
-				<div class="entry">
-					<div class="header">How numbers color our world</div>
-					<div class="text">The 3D visualization of where the colors of an image figure in the L*A*B* world (statistically). Pixels are translated to the L*a*b* space and clustered by k-means (k=5). The RGB gamut mapped to LAB coordinates are then used to visualize the positions of these pixels. </div>
-					<div class="image">images/Lenna.png</div>
-					<div class="url">colors.html</div>
-				</div>
-				<div class="entry">
-					<div class="header">Julia Sets</div>
-					<div class="text">
-						<pre>
-							<code class="cpp">
-// determine the pixel color according to the fractal in question
-int get_pix_color(long x, long y, double fx, double fy)
-{
-	double scaled_x = (x - 320.0)/320.0;
-	double scaled_y = (y - 240.0)/240.0;
-	cplx p(fx, fy);
-	cplx z(scaled_x, scaled_y);
-	short cnt = 0;
-	while (z() < 4 && cnt < 100) {
-		z = evaluate(z, p);
-		cnt++;
-	}
-	return get_color_for_count(cnt);
-}
-
-int main()
-{
-    double fx = 0, fy = 0;
-	std::cin >> fx >> fy;
-
-	int gd=DETECT, gm=0;
-	initgraph(&gd, &gm, "RGB");
-
-	for (short x = 0; x < 640; ++x) {
-		for (short y = 0; y < 480; ++y) {
-			putpixel(x, y, get_pix_color(x, y, fx, fy));
-		}
-	}
-
-	getch();
-	closegraph();
-	return 0;
-}
-							</code>
-						</pre>
+					<div class="col sep" style="height: 200px;">
 					</div>
-					<div class="image">images/frac1.png</div>
-				</div>
-				<div class="entry">
-					<div class="header">Mandelbrot Set</div>
-					<div class="text">
-						<pre>
-							<code class="cpp">
-#include &lt;graphics.h&gt;
-#include &lt;math.h&gt;
-#include &lt;conio.h&gt;
-#include &lt;iostream.h&gt;
-
-struct cplx {
-    double real;
-    double imag;
-    cplx():real(0), imag(0) {}
-    cplx(double r, double i):real(r), imag(i) {}
-    double operator()(void) const {
-        return (real * real + imag * imag);
-    }
-};
-
-// This function determines the polynomial Z^2 + C
-cplx evaluate(cplx const& z, cplx const& c)
-{
-    cplx res;
-    res.real = z.real * z.real - z.imag * z.imag + c.real;
-    res.imag = 2 * z.real * z.imag + c.imag;
-    return res;
-}
-
-short get_pix_color(long x, long y)
-{
-    double scaled_x = (x - 320.0)/320.0; // screen resolution's only 640x480
-    double scaled_y = (y - 240.0)/240.0;
-    cplx p(scaled_x, scaled_y);
-    cplx z;
-    short cnt = 0;
-    while (z() < 4 && cnt < 100) {
-        z = evaluate(z, p);
-        cnt++;
-    }
-    return cnt%16; // 'cause there'll only 16 colors (duh!!)
-}
-
-void main()
-{
-    int gd=DETECT, gm=0;
-    initgraph(&gd, &gm, "C:\\tc\\bgi");
-
-    for (short x = 0; x < 640; ++x) {
-        for (short y = 0; y < 480; ++y) {
-            putpixel(x, y, get_pix_color(x, y));
-        }
-    }
-
-    getch();
-    closegraph();
-}
-							</code>
-						</pre>
+					<div class="col">
+						<b>Basic Whitted Ray Tracing</b><br>
+						<a href="https://github.com/mayurhemani/newb_ray"><mark>Code</mark></a><br/>
+						<p>
+							Heard a <a href="https://youtu.be/k9Nz2z1jTFQ)">lecture</a> on Whitted ray tracing and decided to code it.
+						</p>
 					</div>
-					<div class="image">images/mandelbrot.png</div>
 				</div>
-			</div>
+				<div class="row sep">&nbsp;</div>
+				<div class="row">
+					<div class="col">
+						<b>Fractals with TinyBGI</b><br/>
+						<a href="https://github.com/mayurhemani/newb_ray"><mark>Code</mark></a><br/>
+						<p>
+							BGI was what got me into C++ programming some 20 years back. A few years ago, while still on Win32, I found this little library called <a href="">OpenBGI</a> and indulged(yes)  in some code. Much later, those programs are now replicated using OpenCV culminating in this subset of BGI that i found myself using all the time.
+						</p>
+					</div>
+					<div class="col sep" style="height: 200px;"></div>
+					<div class="col">
+						 <img src="images/frac1.png" style="width:250px;" />
+					</div>
+				</div>
+				
+				<div class="row sep">&nbsp;</div>
 
-		</div>
-		
-		<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
-		<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="bower_components/highlightjs/highlight.pack.min.js"></script>
-		<script type="text/javascript" src="bower_components/event.js/dist/Event.js"></script>
-		<script type="text/javascript" src="bower_components/magnifierjs/Magnifier.js"></script>
+				<div class="row">
+					<div class="col" id="eleCVContainer">
+						<canvas data-processing-sources="res/b1.js" style="border-radius: 15px;"></canvas>
+					</div>
+					<div class="col sep"></div>
+					<div class="col">
+						<b>Leadership Evolution</b><br/>
+						<p>A speculative animation of how contact-based leadership may evolve a following over time.
+							Leader is green. Followers are yellow. Contact of a leader with a red entity causes it to convert 
+							to a follower with 70% prob.
+						</p>
+					</div>
+				</div>
+
+			</section>
+
+		</main>	
 		<script type="text/javascript" src="js/main.js"></script>
-		</script>
+		<script type='text/javascript' src="js/processing.min.js"></script>
 	</body>
 </html>
